@@ -34,7 +34,7 @@ main nav {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 100vh;
+  height: 100%;
   width: 6.5vw;
   z-index: 1;
   background-color: #1c1d25;
