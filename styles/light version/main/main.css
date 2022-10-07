@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 * {
   margin: 0;
@@ -1051,6 +1052,81 @@ main .credit_close .credit_close_wrapper .credit_close_bank_img {
 }
 
 main .credit_close .credit_close_wrapper .credit_close_bank_img img {
+  height: 100%;
+}
+
+main .сommunal_payments .servives_items_wrapper {
+  display: none;
+}
+
+main .сommunal_payments .сommunal_payments_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main .сommunal_payments .сommunal_payments_wrapper span {
+  color: #fff;
+  font-family: "Fira Sans";
+  font-size: 1.250rem;
+  font-weight: 200;
+}
+
+main .hostings .servives_items_wrapper {
+  display: none;
+}
+
+main .hostings .hostings_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main .hostings .hostings_wrapper .hosting_item {
+  margin: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 135px;
+  width: 175px;
+  background-color: #fff;
+  border-radius: 0.75rem;
+  -webkit-box-shadow: 0px 0px 6px rgba(99, 99, 99, 0.1);
+          box-shadow: 0px 0px 6px rgba(99, 99, 99, 0.1);
+}
+
+main .hostings .hostings_wrapper .hosting_item_img {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 95%;
+  height: 95%;
+}
+
+main .hostings .hostings_wrapper .hosting_item_img img {
   height: 100%;
 }
 
@@ -2625,9 +2701,9 @@ main .disabled {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .mobile_operators_menu .wrapper .close_menu svg {
