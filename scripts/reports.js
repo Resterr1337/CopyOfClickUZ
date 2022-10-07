@@ -31,6 +31,10 @@ let drawOptionsToReportsSelect = () => {
 drawOptionsToReportsSelect()
 export let drawReports = () => {
     document.querySelector(".reports_wrapper").innerHTML = ``
+    document.querySelector(".last_payments_text_wrapper").innerHTML = `
+    <span class="history_trans">Последние действия</span>
+    <div class="reports_wrapper_main"></div>
+`
     if (JSON.parse(localStorage.getItem("reportsArr")).length != 0) {
         if (document.querySelector(".report_select_card").value == "false") {
         for (let i of JSON.parse(localStorage.getItem("reportsArr"))) {
@@ -43,7 +47,17 @@ export let drawReports = () => {
                     <span class="report-date">${i.date}</span>
                 `
 
+                let mainreport = document.createElement("div")
+                mainreport.classList.add("report")
+                mainreport.setAttribute("cardNumber" , i.cardNumber)
+
+                mainreport.innerHTML = `
+                    <span class="report-content">${i.content}</span>
+                    <span class="report-date">${i.date}</span>
+                `
+
                 document.querySelector(".reports_wrapper").append(report)
+                document.querySelector(".reports_wrapper_main").append(mainreport)
             }
         } else {
             for (let i of JSON.parse(localStorage.getItem("reportsArr"))) {
@@ -61,6 +75,7 @@ export let drawReports = () => {
                 }
             }
         }
+    } else {
     }
 }
 
