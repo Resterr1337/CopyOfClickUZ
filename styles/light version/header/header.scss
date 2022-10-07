@@ -53,22 +53,21 @@ header{
 
             .header_buttons{
                 width: 6.5%;
-                height: 30px;
+                height: 100%;
                 display: flex;
                 align-items: center;
                 justify-content: space-between; 
 
                 .hide_balance_button{
-                    cursor: pointer;
-                    width: 30px;
-                    transform: scale(0.85);
+                    img{
+                        width: 30px;
+                    }
                 }
 
                 .reflesh_balance_button{
-                    cursor: pointer;
-                    width: 30px;
-                    height: 30px;
-                    transform: scale(0.85) translateY(-2px);
+                    img{
+                        width: 30px;
+                    }
                 }
             }
 

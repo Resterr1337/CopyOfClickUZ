@@ -80,7 +80,7 @@ header .header_wrapper .left_side .logo_wrapper a svg path {
 
 header .header_wrapper .left_side .header_buttons {
   width: 6.5%;
-  height: 30px;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -92,19 +92,12 @@ header .header_wrapper .left_side .header_buttons {
           justify-content: space-between;
 }
 
-header .header_wrapper .left_side .header_buttons .hide_balance_button {
-  cursor: pointer;
+header .header_wrapper .left_side .header_buttons .hide_balance_button img {
   width: 30px;
-  -webkit-transform: scale(0.85);
-          transform: scale(0.85);
 }
 
-header .header_wrapper .left_side .header_buttons .reflesh_balance_button {
-  cursor: pointer;
+header .header_wrapper .left_side .header_buttons .reflesh_balance_button img {
   width: 30px;
-  height: 30px;
-  -webkit-transform: scale(0.85) translateY(-2px);
-          transform: scale(0.85) translateY(-2px);
 }
 
 header .header_wrapper .left_side .balance {
