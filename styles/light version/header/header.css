@@ -79,7 +79,7 @@ header .header_wrapper .left_side .logo_wrapper a svg path {
 }
 
 header .header_wrapper .left_side .header_buttons {
-  width: 6.5%;
+  width: 60px;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;

@@ -34,11 +34,10 @@ main nav {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 100%;
+  height: 100vh;
   width: 6.5vw;
   z-index: 1;
   background-color: #1c1d25;
-  overflow-y: scroll;
   overflow-x: hidden;
 }
 
@@ -2100,7 +2099,7 @@ main .reports .report_wrapper .filter_wrapper .chose_card_select {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 25%;
+  width: 40%;
   height: 32px;
 }
 
@@ -2196,11 +2195,12 @@ main .disabled {
 }
 
 .backdrop_el {
+  overflow-y: hidden;
   top: 0;
   position: fixed;
   z-index: 11;
   width: 100vw;
-  height: 100%;
+  height: 100vh;
   background-color: #23243080;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3350,4 +3350,61 @@ main .disabled {
   border-radius: 50px;
   background-color: #232430;
 }
-/*# sourceMappingURL=main.css.map */
+
+
+
+@media (max-width : 1680px){
+  main nav{
+    width: 7vw;
+  }
+}
+@media (max-width : 1477px){
+  main .main .card_section .wrapper .card_wrapper .card .card_balance span{
+    font-size: 0.750rem;
+  }
+  main .main .card_section .wrapper .card_wrapper .card .card_number span{
+    font-size: 12px;
+  }
+}
+@media (max-width : 1440px){
+  main nav{
+    width: 8vw;
+  }
+  header .header_wrapper .left_side .balance .count{
+    font-size: 1.750rem;
+  }
+}
+@media (max-width : 1398px) {
+  main .main .card_section .wrapper .card_wrapper .card .card_number span{
+    font-size: 11px;
+  }
+  main .translations .wrapper .left_side_wrapper .input_wrapper span{
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width : 1330px ) {
+  main .translations .wrapper .left_side_wrapper .input_wrapper span{
+    font-size: 1rem;
+  }
+}
+@media (max-width : 1319px) {
+  main .main .card_section .wrapper .card_wrapper .card .card_number{
+    width: 100%;
+  }
+}
+
+@media (max-width : 1280px) {
+  main .main .card_section .wrap .card_text_wrapper .span{
+    font-size: 1.25rem;
+  }
+  main .main .my_home_section .my_home_text_wrapper span{
+    font-size: 1.25rem;
+  }
+  main .main .debts_section .debts_text_wrapper span{
+    font-size: 1.25rem;
+  }
+  main .main .last_payments_section .last_payments_text_wrapper span:nth-child(1){
+    font-size: 1.25rem;
+  }
+}
