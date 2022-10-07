@@ -92,12 +92,15 @@ header .header_wrapper .left_side .header_buttons {
           justify-content: space-between;
 }
 
-header .header_wrapper .left_side .header_buttons .hide_balance_button img {
+header .header_wrapper .left_side .header_buttons .hide_balance_button {
+  cursor: pointer;
   width: 30px;
 }
 
-header .header_wrapper .left_side .header_buttons .reflesh_balance_button img {
+header .header_wrapper .left_side .header_buttons .reflesh_balance_button {
+  cursor: pointer;
   width: 30px;
+  height: 30px;
 }
 
 header .header_wrapper .left_side .balance {

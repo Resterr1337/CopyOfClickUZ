@@ -59,15 +59,14 @@ header{
                 justify-content: space-between; 
 
                 .hide_balance_button{
-                    img{
-                        width: 30px;
-                    }
+                    cursor: pointer;
+                    width: 30px;
                 }
 
                 .reflesh_balance_button{
-                    img{
-                        width: 30px;
-                    }
+                    cursor: pointer;
+                    width: 30px;
+                    height: 30px;
                 }
             }
 
