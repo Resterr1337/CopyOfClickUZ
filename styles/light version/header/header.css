@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header {
+  background-color: #22232d;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fff;
+  height: 74px;
+  z-index: 10;
+  width: 100%;
+  -webkit-box-shadow: 0 5px 59px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 5px 59px 0 rgba(0, 0, 0, 0.19);
+  padding: 5px 1.625rem 5px 0;
+}
+
+header .header_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 98.5%;
+  height: 100%;
+}
+
+header .header_wrapper .left_side {
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+header .header_wrapper .left_side .logo_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 12.50%;
+  height: 100%;
+}
+
+header .header_wrapper .left_side .logo_wrapper a svg {
+  -webkit-transform: scale(1.1, 1.15) translateX(-5px);
+          transform: scale(1.1, 1.15) translateX(-5px);
+}
+
+header .header_wrapper .left_side .logo_wrapper a svg path {
+  fill: #09beeb;
+}
+
+header .header_wrapper .left_side .header_buttons {
+  width: 6.5%;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .header_wrapper .left_side .header_buttons .hide_balance_button {
+  cursor: pointer;
+  width: 30px;
+  -webkit-transform: scale(0.85);
+          transform: scale(0.85);
+}
+
+header .header_wrapper .left_side .header_buttons .reflesh_balance_button {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  -webkit-transform: scale(0.85) translateY(-2px);
+          transform: scale(0.85) translateY(-2px);
+}
+
+header .header_wrapper .left_side .balance {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+  margin-left: 10px;
+}
+
+header .header_wrapper .left_side .balance .count {
+  font-family: "Fira Sans";
+  font-weight: 300;
+  font-size: 2.25rem;
+  color: #fff;
+}
+
+header .header_wrapper .left_side .balance .count .vallet {
+  margin-left: 5px;
+  color: #989898;
+  font-size: 1.75rem;
+}
+
+header .header_wrapper .right_side {
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+header .header_wrapper .right_side .contacts {
+  height: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+header .header_wrapper .right_side .contacts a {
+  font-family: "Fira Sans";
+  font-weight: 300;
+  font-size: 14px;
+  text-decoration: none;
+  color: #09beeb;
+}
+
+header .header_wrapper .right_side .contacts .number {
+  font-family: "Fira Sans";
+  font-weight: 200;
+  font-size: 20px;
+  text-decoration: none;
+  color: #FFF;
+}
+
+header .header_wrapper .right_side .contacts .code {
+  font-family: "Fira Sans";
+  font-weight: 200;
+  font-size: 16px;
+  text-decoration: none;
+  color: #989898;
+  margin-right: 5px;
+}
+
+.blur_animation span {
+  -webkit-animation-name: blur;
+          animation-name: blur;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+@-webkit-keyframes blur {
+  0% {
+    color: transparent;
+    text-shadow: 0 0 10px white;
+  }
+  70% {
+    color: transparent;
+    text-shadow: 0 0 10px white;
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+
+@keyframes blur {
+  0% {
+    color: transparent;
+    text-shadow: 0 0 10px white;
+  }
+  70% {
+    color: transparent;
+    text-shadow: 0 0 10px white;
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+/*# sourceMappingURL=header.css.map */

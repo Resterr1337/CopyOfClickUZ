@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: #22232d;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    height: 74px;
+    z-index: 10;
+    width: 100%;
+    box-shadow: 0 5px 59px 0 rgba(0 , 0 , 0 , 0.19);
+    padding: 5px 1.625rem 5px 0;
+
+    .header_wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 98.5%;
+        height: 100%;
+
+        .left_side{
+            width: 50%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+            .logo_wrapper{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 12.50%;
+                height: 100%;
+
+                a{
+                    svg{
+                        transform: scale(1.10 , 1.15) translateX(-5px);
+
+                        path{
+                            fill: #09beeb;
+                        }
+                    }
+                }
+            }
+
+            .header_buttons{
+                width: 6.5%;
+                height: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between; 
+
+                .hide_balance_button{
+                    cursor: pointer;
+                    width: 30px;
+                    transform: scale(0.85);
+                }
+
+                .reflesh_balance_button{
+                    cursor: pointer;
+                    width: 30px;
+                    height: 30px;
+                    transform: scale(0.85) translateY(-2px);
+                }
+            }
+
+            .balance{
+                display: flex;
+                align-items: center;
+                justify-content:space-between ;
+                height: 100%;
+                margin-left: 10px;
+
+                .count{
+                    font-family: "Fira Sans";
+                    font-weight: 300;
+                    font-size: 2.25rem;
+                    color: #fff;
+
+                    .vallet{
+                        margin-left: 5px;
+                        color: #989898;
+                        font-size: 1.75rem;
+                    }
+                }
+            }
+        }
+
+
+        .right_side{
+            width: 50%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            .contacts{
+                height: 10%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+
+                a{
+                    font-family: "Fira Sans";
+                    font-weight: 300;
+                    font-size: 14px;
+                    text-decoration: none;
+                    color: #09beeb;
+
+                }
+
+                .number{
+                    font-family: "Fira Sans";
+                    font-weight: 200;
+                    font-size: 20px;
+                    text-decoration: none;
+                    color: #FFF;
+                }
+
+                .code{                    
+                    font-family: "Fira Sans";
+                    font-weight: 200;
+                    font-size: 16px;
+                    text-decoration: none;
+                    color: #989898;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}
+.blur_animation {
+    span{                    
+        animation-name: blur;
+        animation-timing-function: ease-in;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+    }
+}
+
+@keyframes blur {
+    0%{
+        color: transparent;
+        text-shadow: 0 0 10px rgb(255,255,255)
+    }
+    70%{
+        color: transparent;
+        text-shadow: 0 0 10px rgb(255,255,255)
+    }
+    100%{
+        text-shadow: none
+    }
+}

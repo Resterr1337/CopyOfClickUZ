@@ -1,0 +1,2341 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #373845;
+    overflow-x: hidden;
+
+}
+main{
+    width: 100vw;
+    display: flex;
+
+
+    nav{
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 6.5vw;
+        z-index: 1;
+        background-color: #1c1d25;
+
+        .nav_elem{
+            cursor: pointer;
+            width: 100%;
+            height: 72px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            justify-content: space-around;
+            padding: 5px 0px;
+            background-color: #1c1d25;
+            transition: background-color .3s ease-out,border-color .3s ease-out;
+            transition-property: background-color, border-color;
+            transition-duration: 0.3s, 0.3s;
+            transition-timing-function: ease-out, ease-out;
+            transition-delay: 0s, 0s;
+
+            .elem_title{
+                color: #fff;
+                font-weight: 200;
+                font-family: "Fira Sans";
+                font-size: .825rem;
+            }
+
+            &:hover{
+                background-color: #373845;
+            }
+        }
+
+        .active{
+            background-color: #373845;
+            svg{
+                *{
+                    stroke: #09beeb;
+                }
+            }
+        }
+    }
+
+    .main{
+        position: absolute;
+        top: 72px;
+        left: 6.475vw;
+        width: 93.5%;
+        display: flex;
+        flex-direction: column;
+        background-color: #373845;
+        padding: 16px 26px 0px 46px;
+
+        .card_section{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+
+            .wrap{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .card_text_wrapper{
+                    height: 92px;
+                    width: 220px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    .span{
+                        cursor: pointer;
+                        font-size: 1.5rem;
+                        font-family: "Fira Sans";
+                        color: #fff;
+                        font-weight: 200;
+                    }
+
+                    .transition_to_cards{
+                        cursor: pointer;
+                        color: #09beeb;
+                        border-bottom: solid 1px;
+                        font-size: 0.900rem;
+                        font-family: "Fira Sans";
+                        font-weight: 200;
+                    }
+
+                    .transition_to_cards:hover{
+                        color: white;
+                    }
+                }
+
+                .favourite_text_wrapper{
+                    height: 92px;
+                    width: 256px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    .span{
+                        cursor: pointer;
+                        font-size: 1.5rem;
+                        font-family: "Fira Sans";
+                        color: #fff;
+                        font-weight: 200;
+                    }
+
+                    .transition_to_favourites{
+                        cursor: pointer;
+                        color: #09beeb;
+                        border-bottom: solid 1px;
+                        font-size: 0.900rem;
+                        font-family: "Fira Sans";
+                        font-weight: 200;
+                    }
+                    
+                    .transition_to_favourites:hover{
+                        color: white;
+                    }
+                }
+
+                .check{
+                    font-size: 1.75rem;
+                    font-family: "Fira Sans";
+                    color: #fff;
+                    font-weight: 200;
+                }
+            }
+
+            .wrapper{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: space-between;
+
+                .card_wrapper{
+                    width: 80%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: flex-start;
+                    align-content: space-between;
+
+                    .card{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        cursor: pointer;
+                        height: 100px;
+                        width: 23%;
+                        background-color: #232430;
+                        box-shadow: 3px 2px 3px rgba(0, 0, 0, 0.10);
+                        border: 1px solid #232430;
+                        border-radius: 0.75rem;
+                        padding: 14px 15px 12px 15px;
+                        margin: 5px;
+
+                        .card_balance{
+                            display: flex;
+                            svg{
+                                z-index: 3;
+                            }
+                            span{
+                                margin-left: 2px;
+                                z-index: 3;
+                            }
+                        }
+
+                        img{
+                            height: 32px;
+                            width: 25%;
+                            object-fit: contain;
+                        }
+
+                        span{
+                            font-size: 0.825rem;
+                            font-family: "Fira Sans";
+                            color: #fff;
+                            font-weight: 200;
+                            z-index: 3;
+                            .count{
+                                font-size: 1rem;
+                                z-index: 3;
+                            }
+                        }
+
+                        .card_number{
+                            width: 80%;
+                            display: flex;
+                            z-index: 3;
+                            span{
+                                font-size: 13px;
+                                font-family: "Fira Sans";
+                                font-weight: 200;
+                                color: #60738b;
+                                z-index: 3;
+                            }
+
+                            svg{
+                                z-index: 3;
+                                transform: scale(0.85) translateX(5px) translateY(-1px);
+                            }
+                        }
+
+                        .blur_animation {
+                            span{                    
+                                animation-name: blur;
+                                animation-timing-function: ease-in;
+                                animation-duration: 1s;
+                                animation-iteration-count: 1;
+                            }
+                        }
+                        
+                        @keyframes blur {
+                            0%{
+                                color: transparent;
+                                text-shadow: 0 0 10px rgb(255,255,255)
+                            }
+                            70%{
+                                color: transparent;
+                                text-shadow: 0 0 10px rgb(255,255,255)
+                            }
+                            100%{
+                                text-shadow: none
+                            }
+                        }
+                    }
+
+                    .add_card{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        cursor: pointer;
+                        height: 100px;
+                        width: 23%;
+                        background-color: #232430;
+                        box-shadow: 3px 2px 3px rgba(0, 0, 0 , 0.10);
+                        border: 1px solid #232430;
+                        border-radius: 0.75rem;
+                        margin: 5px;
+
+                        span{
+                            font-size: 1rem;
+                            font-family: "Fira Sans";
+                            color: #fff;
+                            font-weight: 200;
+                        }
+                    }
+                }
+
+                .favourites{
+                    display: flex;
+                    flex-wrap: wrap;
+                    width: 400px;
+                    height: 100%;
+
+                    .item{
+                        cursor: pointer;
+                        width: 80px;
+                        height: 80px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        .title{
+                            text-transform: uppercase;
+                            font-size: 1rem;
+                            font-family: "Fira Sans";
+                            color: #fff;
+                            font-weight: 200;
+                            margin-bottom: 2px;
+                        }
+
+                        .img_wrapper{
+                            width: 64px;
+                            height: 64px;
+                            border-radius: 16px;
+                            background-color: #FFF;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            
+                            img{
+                                border-radius: 16px;
+                                width: 80%;
+                                height: 80%;
+                            }
+                        }
+                    }
+                }
+
+                .checks{
+                    margin-left: 19vw;
+                    span{
+                        font-size: 1rem;
+                        font-family: "Fira Sans";
+                        color: #fff;
+                        font-weight: 200;
+                    }
+                }
+            }
+        }
+
+        .my_home_section{
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 50px;
+            width: 80%;
+            height: 100%;
+
+            .my_home_text_wrapper{
+                width: 100%;
+                margin-bottom: 30px;
+
+                span{
+                    cursor: pointer;
+                    font-size: 1.5rem;
+                    font-family: "Fira Sans";
+                    color: #fff;
+                    font-weight: 200;
+                }
+            }
+
+            .wrapper{
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                width: 75%;
+                height: 100%;
+
+                .img_wrapper{
+                    width: 100px;
+                    height: 100px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-right: 25px;
+                }
+
+                .text_wrapper{
+                    display: flex;
+                    flex-direction: column;
+                    width: 80%;
+
+                    .title{
+                        font-size: 1.5rem;
+                        font-family: "Fira Sans";
+                        color: #09beeb;
+                        font-weight: 200;
+                        margin-bottom: 10px;
+                    }
+
+                    .subtitle{
+                        font-size: 1rem;
+                        font-family: "Fira Sans";
+                        color: #fff;
+                        font-weight: 200;
+                    }
+                }
+            }
+            .button{
+                border-radius: 7px;
+                width: 20%;
+                height: 56px;
+                background-color: #09beeb;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: auto;
+
+                span{
+                    font-size: 1.25rem;
+                    font-family: "Fira Sans";
+                    color: #fff;
+                    font-weight: 200;
+                }
+            }
+        }
+
+        .debts_section{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 50px;
+
+            .debts_text_wrapper{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 256px;
+
+                span{
+                    cursor: pointer;
+                    font-size: 1.5rem;
+                    font-family: "Fira Sans";
+                    color: #fff;
+                    font-weight: 200;
+                }
+
+                .debts_button{
+                    cursor: pointer;
+                    width: 128px;
+                    height: 32px;
+                    background-color: #09beeb;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 15px;
+
+                    span{
+                        font-size: 1rem;
+                    }
+                }
+            }
+
+            .debts_wrapper{
+                margin-top: 15px;
+                margin-bottom: 15px;
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                height: 100%;
+
+                .item{
+                    cursor: pointer;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    width: 328px;
+                    height: 100px;
+                    border-radius: 15px;
+                    background-color: #232430;
+                    box-shadow: 3px 2px 3px rgba(0, 0, 0, 0.10);
+                    border: 1px solid #232430;
+
+                    span{
+                        font-size: 1rem;
+                        font-family: "Fira Sans";
+                        color: #fff;
+                        font-weight: 200;
+                    }
+                }
+            }
+        }
+
+        .last_payments_section{
+            margin-top: 100px;
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            .last_payments_text_wrapper{
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+
+                span{
+                    font-size: 1.5rem;
+                    font-family: "Fira Sans";
+                    color: #fff;
+                    font-weight: 200;
+                }
+
+                span:nth-child(1){
+                    cursor: pointer;
+                }
+
+                span:nth-child(2){
+                    margin-top: 50px;
+                    margin-bottom: 70px;
+                    font-size: 1rem;
+                    align-self: center;
+                    justify-self: center;
+                }
+            }
+        }
+    }
+
+    .services{
+        position: absolute;
+        top: 72px;
+        left: 6.475vw;
+        width: 93.5%;
+        display: flex;
+        flex-direction: column;
+        background-color: #373845;
+        padding: 16px 26px 0px 46px;
+
+        .service_title{
+            margin-top: 15px;
+            font-size: 1.75rem;
+            font-family: "Fira Sans";
+            color: #fff;
+            font-weight: 200;
+            margin-bottom: 50px;
+            display: flex;
+            width: 140%;
+            align-items: center;
+            justify-content: space-between;
+
+            span{
+                cursor: pointer;
+                width: 35%;
+                color: #fff;
+                font-family: "Fira Sans";
+                font-size: 1.250rem;
+                font-weight: 200;
+                svg{
+                    transform: translateY(2px) translateX(10px);
+                }
+            }
+        }
+
+        div{
+            display: none;
+        }
+
+        .servives_items_wrapper{
+            justify-content: flex-start;
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+
+            .service{
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 10px;
+                background-color: #fff;
+                width: 350px;
+                height: 128px;
+                border-radius: 0.5rem;
+                background-color: #232430;
+                box-shadow: 0 0px 6px rgba(0 , 0 , 0 , 10%);
+                transition-property: box-shadow;
+                transition-duration: 0.3s;
+                transition-timing-function: ease-out;
+                transition-delay: 0s;
+
+                .item_wrapper{
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    .img{
+                        transform: scale(1.25);
+                        width: 35%;
+                        height: 90%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+
+                    .item_title {
+                        width: 35%;
+                        color: #fff;
+                        font-family: "Fira Sans";
+                        font-size: 1.250rem;
+                        font-weight: 200;
+                    }
+                }
+            }
+        }
+
+    }
+    .favourites {
+
+        .servives_items_wrapper{
+            display: none;
+        }
+
+        .favourites_wrapper{
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+
+            .favourite_service{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 135px;
+                width: 175px;
+                background-color: #fff;
+                border-radius: 0.75rem;
+                box-shadow: 0px 0px 6px rgba(99, 99, 99, 0.1);
+            }
+
+            .service_img{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 95%;
+                height: 95%;
+            }
+        }
+
+        .span{
+            width: 35%;
+            color: #fff;
+            font-family: "Fira Sans";
+            font-size: 1.250rem;
+            font-weight: 200;
+        }
+    }
+
+    .mobile_operators{
+        .servives_items_wrapper{
+            display: none;
+        }
+
+        .mobile_operators_wrapper{
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+
+            .mobile_operator{
+                margin: 5px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 135px;
+                width: 175px;
+                background-color: #fff;
+                border-radius: 0.75rem;
+                box-shadow: 0px 0px 6px rgba(99, 99, 99, 0.1);
+            }
+
+            .mobile_operator_img{
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 95%;
+                height: 95%;
+
+                img{
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+    .translations{
+        position: absolute;
+        top: 72px;
+        left: 6.475vw;
+        width: 93.5%;
+        display: flex;
+        flex-direction: column;
+        background-color: #373845;
+        padding: 16px 26px 0px 46px;
+
+        .text_wrapper{
+            display: flex;
+            margin-top: 15px;
+            font-size: 1.75rem;
+            font-family: "Fira Sans";
+            color: #fff;
+            font-weight: 200;
+            margin-bottom: 35px;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .wrapper{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 80vh;
+
+            .left_side_wrapper{
+                width: 26.5%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                border: 1px solid #232430;
+                border-radius: 1rem;
+                overflow: hidden;
+
+                .input_wrapper{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    padding: 1.10rem;
+                    width: 100%;
+                    height: 18%;
+                    background-color: #232430;
+
+                    span{
+                        font-size: 1.25rem;
+                        font-family: "Fira Sans";
+                        color: #fff;
+                        font-weight: 200;
+                    }
+
+                    .names_and_numbers_input{
+                        outline: none;
+                        background-color: #232430;
+                        font-size: 19px;
+                        width: 100%;
+                        height: 55%;
+                        padding-left: 10px;
+                        padding-right: 3px;
+                        border-radius: 0.375rem;
+                        border: 1px solid #38394e;
+                        font-size: 1.25rem;
+                        font-family: "Fira Sans";
+                        color: #fff;
+                        font-weight: 200;
+                    }
+
+                    .names_and_numbers_input:focus{
+                        border-color: rgba(255, 255, 255, 0.171);
+                        box-shadow: 0px 0px 4px rgb(15, 152, 226);
+                    }
+                }
+
+                .items_wrapper{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    height: 80%;
+                    width: 100%;
+                    padding: 0px 0.5rem;
+                    overflow-y: scroll;
+
+                    .item_of_search{
+                        cursor: pointer;
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 0.250rem;
+                        width: 99%;
+                        height: 96px;
+                        margin-top: 0.5rem;
+                        background-color: #FFF;
+                        background-color: #232430;
+                        padding: 10px;
+
+                        .span_wrapper{
+                            width: 65%;
+                            height: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+
+                            span{
+                                font-size: 1rem;
+                                font-family: "Fira Sans";
+                                color: #fff;
+                                font-weight: 200;
+                            }
+
+                            span:nth-child(1) {
+                                font-size: 0.825rem;
+                            }
+
+                            span:nth-child(2) {
+                                margin-bottom: 10px;
+                                font-size: 1.25rem;
+                                color: #fff;
+                            }
+
+                            span:nth-child(3) {
+                                font-size: 0.825rem;
+                                color: #60738b;
+                            }
+                        }
+
+                        .img_wrapper{
+                            width: 50%;
+                            height: 100%;
+
+                            img{
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .right_side_wrapper{
+                width: 72.5%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                border: 1px solid #232430;
+                background-color: #2c2d39;
+                border-radius: 1rem;
+                overflow: hidden;
+
+                .right_side_span_wrapper{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 0px 1.5rem;
+                    width: 100%;
+                    height: 18%;
+                    background-color: #232430;
+
+                    .card_number{
+                        transform: scale(1.25) translateX(25px);
+                        display: flex;
+                        align-items: center;
+
+                        span{
+                            color: #85879c;
+                            font-family: "Fira Sans";
+                            font-size: 1rem;
+                            font-weight: 200;
+                            line-height: 1.5;
+                        }
+
+                        svg{
+                            margin-right: 10px;
+                            fill :#85879c;
+                        }
+                    }
+
+                    .clear_btn{
+                        cursor: pointer;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: 30px;
+                        width: 30px;
+
+                        svg{
+                            width: 80%;
+                            height: 80%;
+                        }
+                    }
+                }
+
+                .func_wrapper{
+                    display: none;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 100%;
+                    height: 25%;
+                    padding: 1.25rem;
+                    background-color: #232430;
+
+                    .inputs_btns_wrapper{
+                        width: 40%;
+                        height: 80%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        input{
+                            width: 100%;
+                            height: 40%;
+                            padding: 0.250rem 0.5rem;
+                            outline: none;
+                            border: 1px solid #38394e;
+                            background-color: #232430;
+                            border-radius: 0.5rem;
+                            color: #fff;
+                            font-size: 1rem;
+                            font-weight: 200;
+                            line-height: 1.5;
+                            font-family: "Fira Sans";
+                        }
+
+                        input:focus{
+                            border-color: rgba(255, 255, 255, 0.171) ;
+                            box-shadow: 0px 0px 4px rgb(15, 152, 226);
+                        }
+
+                        input::placeholder{
+                            color: rgba(255, 255, 255, 0.5);
+                        }
+
+                        button{
+                            width: 100%;
+                            height: 40%;
+                            cursor: pointer;
+                            outline: none;
+                            background-color: #09beeb;
+                            box-shadow: 0px 1px 5px rgba(0, 0 , 0 , 0.50);
+                            border-radius: 0.5rem;
+                            border: none;
+                            color: #FFF;
+                            font-size: 1.25rem;
+                            font-weight: 400;
+                            font-family: "Fira Sans";
+                        }
+                    }
+
+                    .card_select_wrapper{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 50%;
+                        height: 100%;
+
+
+                        .card_select_span{
+                            cursor: pointer;
+                            color: #80e6d2;
+                            font-size: 1rem;
+                            font-weight: 200;
+                            line-height: 1.5;
+                            font-family: "Fira Sans";
+                        }
+
+                        .selected_card{
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            cursor: pointer;
+                            height: 100px;
+                            width: 80%;
+                            background-color: #2f303f;
+                            box-shadow: 3px 2px 3px rgba(0, 0, 0, 0.10);
+                            border: 1px solid #2f303f;
+                            border-radius: 0.75rem;
+                            padding: 14px 15px 12px 15px;
+                            margin: 10px;
+    
+                            .card_balance{
+                                display: flex;
+                                svg{
+                                    z-index: 3;
+                                }
+                                span{
+                                    margin-left: 2px;
+                                    z-index: 3;
+                                }
+                            }
+    
+                            img{
+                                height: 32px;
+                                width: 25%;
+                                object-fit: contain;
+                            }
+    
+                            span{
+                                font-size: 0.825rem;
+                                font-family: "Fira Sans";
+                                color: #fff;
+                                font-weight: 200;
+                                z-index: 3;
+                                .count{
+                                    font-size: 1rem;
+                                    z-index: 3;
+                                }
+                            }
+    
+                            .card_number{
+                                width: 80%;
+                                display: flex;
+                                z-index: 3;
+                                span{
+                                    font-size: 13px;
+                                    font-family: "Fira Sans";
+                                    font-weight: 200;
+                                    color: #60738b;
+                                    z-index: 3;
+                                }
+    
+                                svg{
+                                    z-index: 3;
+                                    transform: scale(0.85) translateX(5px) translateY(-1px);
+                                }
+                            }
+    
+                            .blur_animation {
+                                span{                    
+                                    animation-name: blur;
+                                    animation-timing-function: ease-in;
+                                    animation-duration: 1s;
+                                    animation-iteration-count: 1;
+                                }
+                            }
+                            
+                            @keyframes blur {
+                                0%{
+                                    color: transparent;
+                                    text-shadow: 0 0 10px rgb(255,255,255)
+                                }
+                                70%{
+                                    color: transparent;
+                                    text-shadow: 0 0 10px rgb(255,255,255)
+                                }
+                                100%{
+                                    text-shadow: none
+                                }
+                            }
+                        }
+                    }
+
+                    .anim{
+                        animation-name: notSelectedCardAnimation;
+                        animation-timing-function: ease-in;
+                        animation-duration: 0.5s;
+                        animation-iteration-count: 1;
+                    }
+
+                    @keyframes notSelectedCardAnimation {
+                        0%{
+                            background-color: rgba(255, 0, 0, 0.40);
+                        }
+                        100%{
+                            background-color: rgba(255, 0, 0, 0.0);
+                        }
+                    }
+                }
+
+                .active{
+                    display: flex;
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+    .cards{
+        position: absolute;
+        top: 72px;
+        left: 6.475vw;
+        width: 93.5%;
+        display: flex;
+        flex-direction: column;
+        background-color: #373845;
+        padding: 16px 26px 0px 46px;
+
+        .title{
+            margin-top: 15px;
+            font-size: 1.75rem;
+            font-family: "Fira Sans";
+            color: #fff;
+            font-weight: 200;
+            margin-bottom: 50px;
+            display: flex;
+            width: 140%;
+        }
+
+        .card_wrap{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-content: space-between;
+            width: 100%;
+
+            .card_large{
+                display: flex;
+                width: 23.5%;
+                height: 186px;
+                padding: 1em;
+                flex-direction: column;
+                justify-content: space-between;
+                align-content: space-between;
+                cursor: pointer;
+                box-shadow: 3px 2px 3px rgba(0, 0, 0, 0.10);
+                border-radius: 0.750em;
+                background-color: #232430;
+                margin: 5px;
+
+
+                .card_large_name{
+                    transform: translateY(-10px);
+                    font-size: 14px;
+                    font-family: "Fira Sans";
+                    font-weight: 200;
+                    color: #60738b;
+                    z-index: 3;
+                }
+
+                .card_large_balance{
+                    transform: translateY(-16px);
+                    display: flex;
+                    svg{
+                        z-index: 3;
+                    }
+                    span{
+                        margin-left: 2px;
+                        z-index: 3;
+                    }
+                }
+
+                img{
+                    max-height: 50px;
+                    object-fit: contain;
+                    max-width: 50%;
+                }
+
+                span{
+                    font-size: 1rem;
+                    font-family: "Fira Sans";
+                    color: #fff;
+                    font-weight: 200;
+                    z-index: 3;
+                    .count{
+                        font-size: 1rem;
+                        z-index: 3;
+                    }
+                }
+
+                .card_large_number{
+                    display: flex;
+                    z-index: 3;
+                    span{
+                        font-size: 13px;
+                        font-family: "Fira Sans";
+                        font-weight: 200;
+                        color: #60738b;
+                        z-index: 3;
+                    }
+
+                    svg{
+                        z-index: 3;
+                        transform: scale(0.85) translateX(5px) translateY(-1px);
+                    }
+                }
+
+                .blur_animation {
+                    span{                    
+                        animation-name: blur;
+                        animation-timing-function: ease-in;
+                        animation-duration: 1s;
+                        animation-iteration-count: 1;
+                    }
+                }
+                
+                @keyframes blur {
+                    0%{
+                        color: transparent;
+                        text-shadow: 0 0 10px rgb(255,255,255)
+                    }
+                    70%{
+                        color: transparent;
+                        text-shadow: 0 0 10px rgb(255,255,255)
+                    }
+                    100%{
+                        text-shadow: none
+                    }
+                }
+            }
+
+            .add_card_large{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                height: 186px;
+                margin: 5px;
+                width: 23.5%;
+                background-color: #232430;
+                box-shadow: 3px 2px 3px rgba(0, 0, 0 , 0.10);
+                border: 1px solid #232430;
+                border-radius: 0.75rem;
+
+                span{
+                    font-size: 1rem;
+                    font-family: "Fira Sans";
+                    color: #fff;
+                    font-weight: 200;
+                }
+            }
+        }
+    }
+
+
+    .properties{
+        position: absolute;
+        top: 72px;
+        left: 6.475vw;
+        width: 93.5%;
+        display: flex;
+        flex-direction: column;
+        background-color: #373845;
+        padding: 16px 26px 0px 46px;
+
+        .properties_text_wrapper{
+            margin-bottom: 50px;
+            margin-top: 20px;
+            span{
+                font-size: 1.5rem;
+                font-family: "Fira Sans";
+                color: #fff;
+                font-weight: 200;
+            }
+        }
+
+        .properties_items_wrapper{
+            width: 100%;
+            height: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-content: space-between;
+
+            .card_large_propeties{
+                display: flex;
+                width: 23.5%;
+                height: 186px;
+                padding: 1em;
+                flex-direction: column;
+                justify-content: space-between;
+                align-content: space-between;
+                cursor: pointer;
+                box-shadow: 3px 2px 3px rgba(0, 0, 0, 0.10);
+                border-radius: 0.750em;
+                background-color: #232430;
+                margin: 5px;
+
+
+                .card_large_name{
+                    transform: translateY(-10px);
+                    font-size: 14px;
+                    font-family: "Fira Sans";
+                    font-weight: 200;
+                    color: #60738b;
+                    z-index: 3;
+                }
+
+                .card_large_balance{
+                    transform: translateY(-16px);
+                    display: flex;
+                    svg{
+                        z-index: 3;
+                    }
+                    span{
+                        margin-left: 2px;
+                        z-index: 3;
+                    }
+                }
+
+                img{
+                    max-height: 50px;
+                    object-fit: contain;
+                    max-width: 50%;
+                }
+
+                span{
+                    font-size: 1rem;
+                    font-family: "Fira Sans";
+                    color: #fff;
+                    font-weight: 200;
+                    z-index: 3;
+                    .count{
+                        font-size: 1rem;
+                        z-index: 3;
+                    }
+                }
+
+                .card_large_number{
+                    display: flex;
+                    z-index: 3;
+                    span{
+                        font-size: 13px;
+                        font-family: "Fira Sans";
+                        font-weight: 200;
+                        color: #60738b;
+                        z-index: 3;
+                    }
+
+                    svg{
+                        z-index: 3;
+                        transform: scale(0.85) translateX(5px) translateY(-1px);
+                    }
+                }
+
+                .blur_animation {
+                    span{                    
+                        animation-name: blur;
+                        animation-timing-function: ease-in;
+                        animation-duration: 1s;
+                        animation-iteration-count: 1;
+                    }
+                }
+                
+                @keyframes blur {
+                    0%{
+                        color: transparent;
+                        text-shadow: 0 0 10px rgb(255,255,255)
+                    }
+                    70%{
+                        color: transparent;
+                        text-shadow: 0 0 10px rgb(255,255,255)
+                    }
+                    100%{
+                        text-shadow: none
+                    }
+                }
+            }
+        }
+    }
+
+    .reports{
+        position: absolute;
+        top: 72px;
+        left: 6.475vw;
+        width: 93.5%;
+        display: flex;
+        flex-direction: column;
+        background-color: #373845;
+        padding: 16px 26px 0px 46px;
+
+        .reports_text_wrapper{
+            margin-bottom: 50px;
+            margin-top: 20px;
+            span{
+                font-size: 1.5rem;
+                font-family: "Fira Sans";
+                color: #fff;
+                font-weight: 300;
+            }
+        }
+
+        .report_wrapper{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+
+            .filter_wrapper{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 25px;
+                height: 20px;
+
+                .chose_card_select{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 20%;
+                    height: 32px;
+
+                    select{
+                        color: black;
+                    }
+
+                    span{
+                        font-size: 1rem;
+                        font-family: "Fira Sans";
+                        color: #fff;
+                        font-weight: 300;
+                    }
+                }
+
+                .clear_reports_button{
+                    cursor: pointer;
+                    border-radius: 6px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 10%;
+                    height: 32px;
+                    background-color:#09beeb;
+
+                    span{
+                        font-size: 1rem;
+                        font-family: "Fira Sans";
+                        color: #fff;
+                        font-weight: 300;
+                    }
+                }
+            }
+
+            .reports_wrapper{
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+
+                .report{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 100%;
+                    height: 32px;
+                    padding: 0px 10px;
+
+                    .report-content{
+                        font-size: 15px;
+                        font-family: "Fira Sans";
+                        font-weight: 400;
+                        color: #FFF;
+                    }
+
+                    .report-date{
+                        font-weight: 300;
+                        font-family: "Fira Sans";
+                        font-size: 15px;
+                        color: #85879c;
+                    }
+                }
+
+                .report:nth-child(odd){
+                    background-color:#52525230;
+                }
+                
+                .report:nth-child(even){
+                    background-color: #27292e60;
+                }
+            }
+        }
+    }
+
+    .disabled{
+        display: none;
+        width: 0px;
+        height: 0px;
+    }
+
+}
+.backdrop_el{
+    top: 0;
+    position: fixed;
+    z-index: 11;
+    width: 100vw;
+    height: 100%;
+    background-color: #23243080;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .close_menu_div{
+        width: 100%;
+        height: 100%;
+        z-index: 12;
+    }
+
+    .wrapper{
+        position: fixed;
+        width: 25vw;
+        height: 85vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        background-color: #373845;
+        border-radius: 1vw;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+        padding: 16px 16px;
+        z-index: 13;
+
+        .close_menu{
+            width: 65%;
+            height: 16px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            transform: scale(1.5);
+
+            svg{
+                cursor: pointer;
+            }
+        }
+
+        .menu_text_wrapper{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: start;
+            width: 90%;
+            height: 128px;
+
+            .name_of_card{
+                font-family: "Fira Sans";
+                color: #d4d4d4;
+                font-size: 1.5rem;
+                font-weight: 400;
+                line-height: 1;
+                text-align: center;
+                margin-bottom: 22px;
+            }
+
+            .limits{
+                font-family: "Fira Sans";
+                color: #d4d4d4;
+                font-size: 1rem;
+                font-weight: 400;
+                line-height: 1;
+                text-align: center;
+            }
+        }
+
+        .func_menu_wrapper{
+            width: 100%;
+            height: 60%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid #4f5160;
+
+            .item{
+                width: 80%;
+                height: 16.66%;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                border-top: 1px solid #4f5160;
+
+                .img{
+                    transform: scale(1.5);
+                    svg{
+                        fill: #09beeb;
+                    }
+                }
+
+                span{
+                    cursor: pointer;
+                    margin-left: 25px;
+                    font-size: 1.25rem;
+                    font-weight: 200;
+                    line-height: 1;
+                    text-align: left;
+                    font-family: "Fira Sans";
+                    color: white;
+                    svg{
+                        transform: translateX(5px) translateY(2px);
+                    }
+                }
+            }
+
+            .services_item{
+                width: 80%;
+                height: 16.66%;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                border-top: 1px solid #4f5160;
+    
+                .img{
+                    transform: scale(1.5);
+                    svg{
+                        fill: #09beeb;
+                    }
+                }
+    
+                span{
+                    cursor: pointer;
+                    margin-left: 25px;
+                    font-size: 1.25rem;
+                    font-weight: 200;
+                    line-height: 1;
+                    text-align: left;
+                    font-family: "Fira Sans";
+                    color: white;
+                    svg{
+                        transform: translateX(5px) translateY(2px);
+                    }
+                }
+            }
+            .translation_item{
+                width: 80%;
+                height: 16.66%;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                border-top: 1px solid #4f5160;
+    
+                .img{
+                    transform: scale(1.5);
+                    svg{
+                        fill: #09beeb;
+                    }
+                }
+    
+                span{
+                    cursor: pointer;
+                    margin-left: 25px;
+                    font-size: 1.25rem;
+                    font-weight: 200;
+                    line-height: 1;
+                    text-align: left;
+                    font-family: "Fira Sans";
+                    color: white;
+                    svg{
+                        transform: translateX(5px) translateY(2px);
+                    }
+                }
+            }
+            .reports_item{
+                width: 80%;
+                height: 16.66%;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                border-top: 1px solid #4f5160;
+    
+                .img{
+                    transform: scale(1.5);
+                    svg{
+                        fill: #09beeb;
+                    }
+                }
+    
+                span{
+                    cursor: pointer;
+                    margin-left: 25px;
+                    font-size: 1.25rem;
+                    font-weight: 200;
+                    line-height: 1;
+                    text-align: left;
+                    font-family: "Fira Sans";
+                    color: white;
+                    svg{
+                        transform: translateX(5px) translateY(2px);
+                    }
+                }
+            }
+
+            .change_name_div{
+                width: 80%;
+                height: 16.66%;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                border-top: 1px solid #4f5160;
+                transition-duration: 250ms;
+
+                .img{
+                    transform: scale(1.5);
+                    svg{
+                        fill: #09beeb;
+                    }
+                }
+
+                .change_name_wrap{
+                    display: flex;
+                    flex-direction: column;
+
+                    .title_of_item{
+                        cursor: pointer;
+                        margin-left: 25px;
+                        font-size: 1.25rem;
+                        font-weight: 200;
+                        line-height: 1;
+                        text-align: left;
+                        font-family: "Fira Sans";
+                        color: white;
+                        svg{
+                            transform: translateX(5px) translateY(2px);
+                        }
+                    }
+
+                    .name_input_wrapper{
+                        display: none;
+
+                        input{
+                            outline: none;
+                            border: none;
+                            box-shadow: none;
+                            background-color: transparent;
+                            font-size: 1.10rem;
+                            font-weight: 200;
+                            line-height: 1.5;
+                            color: #fff;
+                            padding: 6px 12px;
+                        }
+
+                        input:focus{
+                            background-color: #232430;
+                        }
+
+                        button{
+                            cursor: pointer;
+                            width: 25px;
+                            height: 25px;
+                            background: transparent;
+                            border: none;
+                            outline: none;
+                        }
+                        
+                    }
+                    .active{
+                        display: flex;
+                        align-items: center;
+                        margin-top: 15px;
+                        margin-left: 25px;
+                    }
+                }
+            }
+
+            .change_color_div{
+                width: 80%;
+                height: 16.66%;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                border-top: 1px solid #4f5160;
+                transition-duration: 250ms;
+
+                .img{
+                    transform: scale(1.5);
+                    svg{
+                        fill: #09beeb;
+                    }
+                }
+
+                .change_color_wrap{
+                    display: flex;
+                    flex-direction: column;
+
+                    .title_of_item{
+                        cursor: pointer;
+                        margin-left: 25px;
+                        font-size: 1.25rem;
+                        font-weight: 200;
+                        line-height: 1;
+                        text-align: left;
+                        font-family: "Fira Sans";
+                        color: white;
+                        svg{
+                            transform: translateX(5px) translateY(2px);
+                        }
+                    }
+
+                    .color_input_wrapper{
+                        display: none;
+
+                        input{
+                            width: 100%;
+                            height: 32px;
+                            outline: none;
+                            border: none;
+                            box-shadow: none;
+                            background-color: transparent;
+                            font-size: 1.10rem;
+                            font-weight: 200;
+                            line-height: 1.5;
+                            color: #fff;
+                            padding: 6px 12px;
+                            background-color: #232430;
+                        }
+
+                        ::-webkit-color-swatch {
+                            border-radius: 0px;
+                            border: 0;
+                        }
+                        
+                        ::-moz-color-swatch {
+                            border-radius: 0px;
+                            border: 0;
+                        }
+
+                        input:focus{
+                            background-color: #232430;
+                        }
+
+                        button{
+                            transform: translateX(20px) scale(1.10);
+                            cursor: pointer;
+                            width: 30px;
+                            height: 30px;
+                            background: transparent;
+                            border: none;
+                            outline: none;
+                        }
+                        
+                    }
+                    .active{
+                        display: flex;
+                        align-items: center;
+                        margin-top: 15px;
+                        margin-left: 25px;
+                    }
+                }
+            }
+
+            .active{
+                height: 25%;
+                transition-duration: 250ms;
+            }
+
+            .item:nth-child(1){
+                border: none;
+            }
+        }
+
+        .close_card{
+            cursor: pointer;
+            width: 100%;
+            height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .wrap{
+                width: 50%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+
+                .img{
+                    svg{
+                        fill:#fa686b;
+                    }
+                }
+
+                span{
+                    width: 100%;
+                    font-size: 1.25rem;
+                    font-weight: 200;
+                    line-height: 1;
+                    text-align: left;
+                    font-family: "Fira Sans";
+                    color: #fa686b;
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+
+}
+.mobile_operators_menu{
+    .wrapper{
+        height: 60vh;
+
+        .close_menu{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            svg{
+                width: 24px;
+                path{
+                    stroke: #FFF;
+                    fill: #FFF;
+                }
+            }
+
+            svg:nth-child(1){
+                transform: translateY(2px);
+            }
+        }
+
+        .menu_img_wrapper{
+            width: 130px;
+            height: 90px;
+            img{
+                width: 100%;
+                height: 100%;
+                border-radius: 15px;
+            }
+        }
+
+        .menu_text_wrapper{
+            height: 16px;
+            margin-top: 10px;
+            .name_of_service{
+                font-family: "Fira Sans";
+                color: #d4d4d4;
+                font-size: 1rem;
+                font-weight: 500;
+                line-height: 1;
+                text-align: center;
+                margin-bottom: 22px;
+            }
+        }
+        
+        .menu_input_wrapper{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-evenly;
+            width: 90%;
+            height: 60%;
+            span{
+                color: #d4d4d4;
+                font-size: 1rem;
+                font-weight: 600;
+                font-family: "Fira Sans";
+            }
+            input{
+                height: auto;
+                border-radius: 0.4rem;
+                background-color: #232430;
+                border: 2px solid #27282d;
+                outline: none;
+                padding: 0.375rem 0.75rem;
+                color: #fff;
+                font-size: 1rem;
+                font-weight: 200;
+                font-family: "Fira Sans";
+            }
+
+            select{
+                height: auto;
+                border-radius: 0.4rem;
+                background-color: #232430;
+                border: 2px solid #27282d;
+                outline: none;
+                padding: 0.375rem 0.75rem;
+                color: #d4d4d4;
+                font-size: 1rem;
+                font-weight: 200;
+                font-family: "Fira Sans";
+            }
+
+            div{
+                width: 100%;
+                height: 20%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+            }
+        }
+
+        .menu_button_wrapper{
+            width: 90%;
+            height: 72px;
+            
+            button{
+                cursor: pointer;
+                outline: none;
+                width: 100%;
+                height: 100%;
+                background-color: #09beeb;
+                box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5);
+                border-radius: 0.5rem;
+                border: none;
+                color: #FFF;
+                color: #d4d4d4;
+                font-size: 1.5rem;
+                font-weight: 400;
+                font-family: "Fira Sans";
+            }
+        }
+    }
+}
+
+.add_card_menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .add_card_menu_wrapper{
+        position: fixed;
+        width: 25vw;
+        height: 70vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between ;
+        background-color: #373845;
+        border-radius: 1vw;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+        padding: 16px 16px;
+        z-index: 13;
+
+        .close_menu{
+            display: flex;
+            width: 100%;
+            justify-content: flex-end;
+
+            svg{
+                cursor: pointer;
+            }
+        }
+
+        .menu_text_wrapper{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: start;
+            width: 90%;
+            height: 50px;
+
+            span{
+                font-family: "Fira Sans";
+                color: #d4d4d4;
+                font-size: 1.5rem;
+                font-weight: 400;
+                line-height: 1;
+                text-align: center;
+                margin-bottom: 22px;
+            }
+        }
+
+        .input_wrapper {
+            width: 100%;
+            height: 60%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            div{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 100%;
+                height: 128px;
+
+                span{
+                    color: #d4d4d4;
+                    font-size: 1rem;
+                    font-weight: 300;
+                    font-family: "Fira Sans";
+                    margin-bottom: 15px;
+                    transform: translateX(5px);
+                }
+
+                input{
+                    height: auto;
+                    background-color: #232430;
+                    border: 2px solid #27282d;
+                    outline: none;
+                    padding: 0.375rem 0.75rem;
+                    color: #fff;
+                    font-size: 1rem;
+                    font-weight: 200;
+                    font-family: "Fira Sans";
+                    border-radius: 20px;
+                }
+
+                .card_background_color{
+                    width: 100%;
+                    height: 72px;
+                    border-radius: 20px;
+                    padding: 0;
+                    border: none;
+                }
+                .card_background_color {
+                    border-radius: 20px;
+                    border: 0 !important;
+                    outline: none !important;
+                }
+                
+                ::-webkit-color-swatch {
+                    border-radius: 20px;
+                    border: 0;
+                }
+                
+                ::-moz-color-swatch {
+                    border-radius: 20px;
+                    border: 0;
+                }
+
+                .card_number_and_card_date{
+                    display: flex;
+                    flex-direction: column;
+
+                    .card_date{
+                        margin-top: 10px;
+                        width: 100%;
+                        height: 32px;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        span{
+                            margin-bottom: 0px;
+                        }
+                        input{
+                            text-align: center;
+                            width: 30%;
+                            padding: 0.25rem 0.5rem;
+                        }
+                    }
+                }
+            }
+
+            input:focus{
+                border: 2px solid #09beeb;
+            }
+        }
+
+        .create_card_wrapp{
+            margin-top: 50px;
+            width: 100%;
+            height: 72px;
+
+            button{
+                cursor: pointer;
+                outline: none;
+                width: 100%;
+                height: 100%;
+                background-color: #09beeb;
+                box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5);
+                border-radius: 0.5rem;
+                border: none;
+                color: #FFF;
+                color: #d4d4d4;
+                font-size: 1.5rem;
+                font-weight: 400;
+                font-family: "Fira Sans";
+            }
+        }
+    }
+}
+
+.select_card_menu{
+    .wrapper{
+        .menu_text_wrapper{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 90%;
+            height: 32px;
+            margin-bottom: 20px;
+
+            span{
+                font-family: "Fira Sans";
+                color: #d4d4d4;
+                font-size: 1.5rem;
+                font-weight: 400;
+                line-height: 1;
+                text-align: center;
+            }
+        }
+
+        .cards_wrapper{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+            height: 90%;
+            overflow-y: scroll;
+
+                .menu_item{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                cursor: pointer;
+                height: 100px;
+                width: 98.5%;
+                background-color: #2f303f;
+                box-shadow: 3px 2px 3px rgba(0, 0, 0, 0.10);
+                border: 1px solid #2f303f;
+                border-radius: 0.75rem;
+                padding: 14px 15px 12px 15px;
+                margin-bottom: 10px;
+
+                .card_balance{
+                    display: flex;
+
+                    svg{
+                        z-index: 3;
+                    }
+                    span{
+                        margin-left: 2px;
+                        z-index: 3;
+                    }
+                }
+
+                img{
+                    height: 32px;
+                    width: 25%;
+                    object-fit: contain;
+                }
+
+                span{
+                    font-size: 0.825rem;
+                    font-family: "Fira Sans";
+                    color: #fff;
+                    font-weight: 200;
+                    z-index: 3;
+
+                    .count{
+                        font-size: 1rem;
+                        z-index: 3;
+                    }
+                }
+
+                .card_number{
+                    width: 80%;
+                    display: flex;
+
+                    span{
+                        font-size: 13px;
+                        font-family: "Fira Sans";
+                        font-weight: 200;
+                        color: #60738b;
+                        z-index: 3;
+                    }
+
+                    svg{
+                        z-index: 3;
+                        transform: scale(0.85) translateX(5px) translateY(-1px);
+                    }
+                }
+            
+                .blur_animation {
+                    span{                    
+                        animation-name: blur;
+                        animation-timing-function: ease-in;
+                        animation-duration: 1s;
+                        animation-iteration-count: 1;
+                    }
+                }
+                @keyframes blur {
+                    0%{
+                        color: transparent;
+                        text-shadow: 0 0 10px rgb(255,255,255)
+                    }
+                    70%{
+                        color: transparent;
+                        text-shadow: 0 0 10px rgb(255,255,255)
+                    }
+                    100%{
+                        text-shadow: none
+                    }
+                }
+            }
+        }
+    }
+}
+
+.cheating_menu{
+    .wrapper{
+        height: 30vh;
+
+        .menu_text_wrapper{
+            height: 32px;
+        }
+
+        .func_menu_wrapper{
+            border: none;
+
+            .add_money_div{
+                width: 80%;
+                transition-duration: 0.250s;
+                display: flex;
+                align-items: center;
+
+                .title_of_item{
+                    cursor: pointer;
+                    margin-left: 25px;
+                    font-size: 1.25rem;
+                    font-weight: 200;
+                    line-height: 1;
+                    text-align: left;
+                    font-family: "Fira Sans";
+                    color: white;
+                    svg{
+                        transform: translateX(5px) translateY(2px);
+                    }
+                }
+
+                .img{
+                    transform: scale(1.25); 
+                }
+
+                .add_money_input_wrapper{
+                    transform: translateY(5px);
+                    display: none;
+
+                    input{
+                        outline: none;
+                        border: none;
+                        box-shadow: none;
+                        background-color: transparent;
+                        font-size: 1.10rem;
+                        font-weight: 200;
+                        line-height: 1.5;
+                        color: #fff;
+                        padding: 6px 12px;
+                    }
+
+                    input:focus{
+                        background-color: #232430;
+                    }
+
+                    button{
+                        cursor: pointer;
+                        width: 25px;
+                        height: 25px;
+                        background: transparent;
+                        border: none;
+                        outline: none;
+                    }
+                    
+                }
+                .active{
+                    transition-duration: 0.250s;
+                    display: flex;
+                    align-items: center;
+                    margin-top: 15px;
+                    margin-left: 25px;
+                }
+            }
+
+            .active{
+                height: 50%;
+                transition-duration: 250ms;
+            }
+        }
+    }
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    background-color: #38394e;
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius: 50px;
+    background-color: #232430;
+} 
