@@ -11,7 +11,7 @@ let drawOptionsToReportsSelect = () => {
     document.querySelector(".report_select_card").innerHTML = `
         <option value="false">Все логи</option>
     `
-    if (JSON.parse(localStorage.getItem("cardsArray")).length != 0 || JSON.parse(localStorage.getItem("cardsArray")) != null){
+    if (JSON.parse(localStorage.getItem("cardsArray")) != null){
         for (let i of JSON.parse(localStorage.getItem("cardsArray"))) {
             let reportOption = document.createElement("option")
             reportOption.setAttribute("value" , `${i.number}`)
