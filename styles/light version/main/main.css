@@ -944,6 +944,61 @@ main .mobile_operators .mobile_operators_wrapper .mobile_operator_img img {
   height: 100%;
 }
 
+main .internet_packets .servives_items_wrapper {
+  display: none;
+}
+
+main .internet_packets .internet_packets_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main .internet_packets .internet_packets_wrapper .internet_packet {
+  margin: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 135px;
+  width: 175px;
+  background-color: #fff;
+  border-radius: 0.75rem;
+  -webkit-box-shadow: 0px 0px 6px rgba(99, 99, 99, 0.1);
+          box-shadow: 0px 0px 6px rgba(99, 99, 99, 0.1);
+}
+
+main .internet_packets .internet_packets_wrapper .internet_packet_img {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 95%;
+  height: 95%;
+}
+
+main .internet_packets .internet_packets_wrapper .internet_packet_img img {
+  height: 100%;
+}
+
 main .translations {
   position: absolute;
   top: 72px;

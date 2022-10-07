@@ -674,6 +674,44 @@ main{
         }
     }
 
+    .internet_packets{
+        .servives_items_wrapper{
+            display: none;
+        }
+
+        .internet_packets_wrapper{
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+
+            .internet_packet{
+                margin: 5px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 135px;
+                width: 175px;
+                background-color: #fff;
+                border-radius: 0.75rem;
+                box-shadow: 0px 0px 6px rgba(99, 99, 99, 0.1);
+            }
+
+            .internet_packet_img{
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 95%;
+                height: 95%;
+
+                img{
+                    height: 100%;
+                }
+            }
+        }
+    }
+
     .translations{
         position: absolute;
         top: 72px;
