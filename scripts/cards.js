@@ -62,16 +62,12 @@ export let addCardsFunc = () => {
 
             document.querySelector(".close_menu_div").onclick = () => {
                 addCardBackgroundElem.classList.toggle("backdrop_el")
-                addCardBackgroundElem.classList.toggle("add_card_menu")
                 addCardBackgroundElem.remove()
-                ShowCardMenu()
             }
 
             document.querySelector(".close_menu_svg").onclick = () => {
                 addCardBackgroundElem.classList.toggle("backdrop_el")
-                addCardBackgroundElem.classList.toggle("add_card_menu")
                 addCardBackgroundElem.remove()
-                ShowCardMenu()
             }
 
             let cardCodeArr = []
