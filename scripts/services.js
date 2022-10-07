@@ -5,7 +5,8 @@ let reportsArr = JSON.parse(localStorage.getItem("reportsArr"));
 const itemsArray = document.querySelectorAll(".service");
 const mobileOperatorsArray = document.querySelectorAll(".mobile_operator");
 const internetPacketsArray = document.querySelectorAll(".internet_packet");
-
+const creditsBanksArray = document.querySelectorAll(".credit_close_bank");
+console.log(creditsBanksArray);
 let favouritesArr;
 if (JSON.parse(localStorage.getItem("favourites")) == null) {
     localStorage.setItem("favourites" , "[]")
@@ -182,7 +183,7 @@ for (let i of itemsArray) {
                                         backdropEl.classList.toggle("backdrop_el");
                                         backdropEl.remove();
                                     } else {
-                                        console.log(`На ${el.name} недостаточно ${document.querySelector(".payment_amount").value - el.balance} сум`);
+                                        alert(`На ${el.name} недостаточно ${document.querySelector(".payment_amount").value - el.balance} сум`);
                                     };
                                 };
                             };
@@ -344,7 +345,7 @@ for (let i of itemsArray) {
                                         backdropEl.classList.toggle("backdrop_el");
                                         backdropEl.remove();
                                     } else {
-                                        console.log(`На ${el.name} недостаточно ${document.querySelector(".payment_amount").value - el.balance} сум`);
+                                        alert(`На ${el.name} недостаточно ${document.querySelector(".payment_amount").value - el.balance} сум`);
                                     };
                                 };
                             };
@@ -354,6 +355,146 @@ for (let i of itemsArray) {
                     };
                 };
             };
+        } else if (i.getAttribute("sectionModify") == "credit_close"){
+            document.querySelector(".service_title").innerHTML = `Погашение кредитов<span class="close_section">Закрыть<svg class="close_menu_svg" width="13.438" height="13.438" viewBox="0 0 13.438 13.438"><path d="M12.983,2.649,8.912,6.721l4.072,4.072a1.55,1.55,0,1,1-2.192,2.193L6.719,8.913,2.647,12.985A1.55,1.55,0,0,1,.454,10.792L4.526,6.72.454,2.649A1.55,1.55,0,0,1,2.646.456L6.719,4.528,10.791.456a1.551,1.551,0,0,1,2.193,2.193Z" transform="translate(0 -0.002)" fill="#fff"></path></svg></span>`
+            document.querySelector(".close_section").onclick = () => {
+                document.querySelector(".services").setAttribute("class" , `services`);
+                document.querySelector(".service_title").innerHTML = "Оплата";
+            };
+
+            for (let creditsBank of creditsBanksArray) {
+                console.log(creditsBank);
+                creditsBank.onclick = () => {
+                    let backdropEl = document.createElement("div");
+                    backdropEl.classList.add("backdrop_el");
+                    backdropEl.classList.add("mobile_operators_menu");
+                    document.querySelector("body").append(backdropEl);
+
+                    backdropEl.innerHTML = `
+                    <div class="close_menu_div">
+                    </div>
+                        <div class="wrapper">
+                            <div class="close_menu">
+                                <svg class="add_to_favourite"  viewBox="0 0 512 512"><path d="M352.92 80C288 80 256 144 256 144s-32-64-96.92-64c-52.76 0-94.54 44.14-95.08 96.81-1.1 109.33 86.73 187.08 183 252.42a16 16 0 0018 0c96.26-65.34 184.09-143.09 183-252.42-.54-52.67-42.32-96.81-95.08-96.81z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
+                                <svg class="close_menu_img" width="13.438" height="13.438" viewBox="0 0 13.438 13.438"><path d="M12.983,2.649,8.912,6.721l4.072,4.072a1.55,1.55,0,1,1-2.192,2.193L6.719,8.913,2.647,12.985A1.55,1.55,0,0,1,.454,10.792L4.526,6.72.454,2.649A1.55,1.55,0,0,1,2.646.456L6.719,4.528,10.791.456a1.551,1.551,0,0,1,2.193,2.193Z" transform="translate(0 -0.002)" fill="#fff"></path></svg>
+                            </div>
+                            <div class="menu_img_wrapper">
+                                <img src="${creditsBank.childNodes[1].childNodes[1].getAttribute("src")}">
+                            </div>
+                            <div class="menu_text_wrapper">
+                                <span class="name_of_service">${creditsBank.getAttribute("title")}</span>
+                            </div>
+                            <div class="menu_input_wrapper">
+                                <div class="number_wrapper">                                
+                                    <span>Номер лицевого счёта</span>
+                                    <input class="number_input">
+                                </div>
+                                <div class="payment_amount_wrapper">
+                                    <span>Сумма</span>
+                                    <input class="payment_amount" placeholder="Введите сумму оплаты">
+                                </div>
+                                <div class="card_selection_wrapper">
+                                    <span>Выберите счёт</span>
+                                    <select class="card_selection">
+                                        <option hidden selected disabled>Выберите карту</option>
+                                        ${drawOptionsFunc()}
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="menu_button_wrapper">
+                                <button class="confirm_button">Продолжить</button>
+                            </div>
+                        </div>
+                    `;
+
+                    document.querySelector(".close_menu_div").onclick = () => {
+                        backdropEl.classList.toggle("backdrop_el");
+                        backdropEl.remove();
+                    };
+
+                    document.querySelector(".add_to_favourite").onclick = () => {
+                        favouritesArr = JSON.parse(localStorage.getItem("favourites"))
+                        favouritesArr.push({
+                            title : creditsBank.getAttribute("title"),
+                            img : creditsBank.childNodes[1].childNodes[1].getAttribute("src"),
+                            class : "close_credit_bank"
+                        })
+                        localStorage.setItem("favourites" , JSON.stringify(favouritesArr))
+                    }
+
+
+                    document.querySelector(".close_menu_img").onclick = () => {
+                        backdropEl.classList.toggle("backdrop_el");
+                        backdropEl.remove();
+                    };
+
+                    let numberArr = [];
+                    document.querySelector(".number_input").oninput = () =>{
+                        numberArr = [];
+                        for (let i of event.target.value) {
+                            if (i == "0" || i == "1" || i == "2" || i == "3" || i == "4" || i == "5" || i == "6" || i == "7" || i == "8" || i == "9" || i == " " || i == "+" ) {
+                                numberArr.push(i);
+                                document.querySelector(".number_input").value = numberArr.join("");
+                            }else {
+                                document.querySelector(".number_input").value = numberArr.join("");
+                            };
+                        };
+                    };
+
+                    let paymentAmountArr = [];
+                    document.querySelector(".payment_amount").oninput = () => {
+                        paymentAmountArr = [];
+                        for (let i of event.target.value) {
+                            if (i == "0" || i == "1" || i == "2" || i == "3" || i == "4" || i == "5" || i == "6" || i == "7" || i == "8" || i == "9") {
+                                paymentAmountArr.push(i);
+                                document.querySelector(".payment_amount").value = paymentAmountArr.join("");
+                            } else {
+                                document.querySelector(".payment_amount").value = paymentAmountArr.join("");
+                            }
+                        };
+                    };
+
+                    document.querySelector(".card_selection").onchange = () => {
+                        console.log(document.querySelector(".card_selection").value.split(" ")[document.querySelector(".card_selection").value.split(" ").length - 1]);
+                    }
+
+                    document.querySelector(".confirm_button").onclick = () => {
+                        if (document.querySelector(".payment_amount").value != "0" && document.querySelector(".payment_amount").length != 0 && document.querySelector(".card_selection").value != "Выберите карту") {
+                            let cardsArray = JSON.parse(localStorage.getItem("cardsArray"))
+                            for (let el of cardsArray) {
+                                if (el.cardId == (document.querySelector(".card_selection").value.split(" ")[document.querySelector(".card_selection").value.split(" ").length - 1])) {
+                                    if (el.balance >= document.querySelector(".payment_amount").value) {
+                                        el.balance -= document.querySelector(".payment_amount").value;
+                                        reportsArr = JSON.parse(localStorage.getItem("reportsArr"))
+                                        localStorage.setItem("cardsArray" , JSON.stringify(cardsArray))
+
+                                        let date = new Date()
+                                        reportsArr.push({
+                                            cardNumber: el.number,
+                                            date : `${date.getDate()}/${date.getMonth()}/${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}` ,
+                                            content : `На счету с номером карты "${el.number}" было списано ${document.querySelector(".payment_amount").value} сум на оплату услуги "${creditsBank.getAttribute("title")}"`
+                                        })
+
+                                        localStorage.setItem("reportsArr" , JSON.stringify(reportsArr))
+                                        reportsArr = JSON.parse(localStorage.getItem("reportsArr"));
+
+                                        drawReports()
+
+                                        drawCards()
+                                        drawCardInCardSection()
+                                        backdropEl.classList.toggle("backdrop_el");
+                                        backdropEl.remove();
+                                    } else {
+                                        alert(`На ${el.name} недостаточно ${document.querySelector(".payment_amount").value - el.balance} сум`);
+                                    };
+                                };
+                            };
+                        } else {
+                            alert("Вы не заполнили одно из полей!");
+                        };
+                    };
+                };
+            }
         };
         document.querySelector(".services").setAttribute("class" , `services ${i.getAttribute("sectionModify")}`);
     };
