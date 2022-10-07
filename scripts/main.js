@@ -89,7 +89,6 @@ export function changeSectionFunc (classOfElement, indexOfElInNavBar , classOfSe
 changeSectionFunc("card_text_wrapper" , 3 , "cards" , true , "Мои карты")
 changeSectionFunc("debts_button" , 2 , "translations" , false , "Переводы")
 changeSectionFunc("history_trans" , 4 , "reports" , false , "Отчёты")
-changeSectionFunc("logo_wrapper" , 0 , "main" , false , "CLICK")
 
 
 // Отрисовка карт

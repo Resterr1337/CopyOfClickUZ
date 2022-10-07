@@ -8,6 +8,13 @@ const internetPacketsArray = document.querySelectorAll(".internet_packet");
 const creditsBanksArray = document.querySelectorAll(".credit_close_bank");
 const hostingsItemArray = document.querySelectorAll(".hosting_item");
 
+let favouritesArr;
+if (JSON.parse(localStorage.getItem("favourites")) == null) {
+    localStorage.setItem("favourites" , "[]")
+    favouritesArr = JSON.parse(localStorage.getItem("favourites"));
+} else {
+    favouritesArr = JSON.parse(localStorage.getItem("favourites"));
+}
 
 let drawOptionsFunc = () => {
     let options = ``;
