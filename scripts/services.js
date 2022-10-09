@@ -51,7 +51,6 @@ for (let i of itemsArray) {
                     </div>
                         <div class="wrapper">
                             <div class="close_menu">
-                                <svg class="add_to_favourite"  viewBox="0 0 512 512"><path d="M352.92 80C288 80 256 144 256 144s-32-64-96.92-64c-52.76 0-94.54 44.14-95.08 96.81-1.1 109.33 86.73 187.08 183 252.42a16 16 0 0018 0c96.26-65.34 184.09-143.09 183-252.42-.54-52.67-42.32-96.81-95.08-96.81z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
                                 <svg class="close_menu_img" width="13.438" height="13.438" viewBox="0 0 13.438 13.438"><path d="M12.983,2.649,8.912,6.721l4.072,4.072a1.55,1.55,0,1,1-2.192,2.193L6.719,8.913,2.647,12.985A1.55,1.55,0,0,1,.454,10.792L4.526,6.72.454,2.649A1.55,1.55,0,0,1,2.646.456L6.719,4.528,10.791.456a1.551,1.551,0,0,1,2.193,2.193Z" transform="translate(0 -0.002)" fill="#fff"></path></svg>
                             </div>
                             <div class="menu_img_wrapper">
