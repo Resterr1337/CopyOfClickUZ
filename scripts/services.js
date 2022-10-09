@@ -87,16 +87,6 @@ for (let i of itemsArray) {
                         backdropEl.remove();
                     };
 
-                    document.querySelector(".add_to_favourite").onclick = () => {
-                        favouritesArr = JSON.parse(localStorage.getItem("favourites"))
-                        favouritesArr.push({
-                            title : mobileOperator.getAttribute("title"),
-                            img : mobileOperator.childNodes[1].childNodes[1].getAttribute("src"),
-                            class : "mobile_operator"
-                        })
-                        localStorage.setItem("favourites" , JSON.stringify(favouritesArr))
-                    }
-
 
                     document.querySelector(".close_menu_img").onclick = () => {
                         backdropEl.classList.toggle("backdrop_el");
