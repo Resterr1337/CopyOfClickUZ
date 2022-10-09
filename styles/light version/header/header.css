@@ -20,8 +20,8 @@ header {
           justify-content: center;
   color: #fff;
   height: 74px;
-  z-index: 10;
-  width: 100%;
+  z-index: 15;
+  width: 100vw;
   -webkit-box-shadow: 0 5px 59px 0 rgba(0, 0, 0, 0.19);
           box-shadow: 0 5px 59px 0 rgba(0, 0, 0, 0.19);
   padding: 5px 1.625rem 5px 0;
@@ -79,7 +79,7 @@ header .header_wrapper .left_side .logo_wrapper a svg path {
 }
 
 header .header_wrapper .left_side .header_buttons {
-  width: 60px;
+  width: 6.5%;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;

@@ -389,3 +389,25 @@ window.addEventListener('resize', () => {
     drawCards() 
     drawCardInPropertiesSection()
 })
+
+
+let documentBackgrond = document.createElement("div")
+documentBackgrond.style.cssText = `
+    background-color: #373845;
+    width : ${window.screen.width}px;
+    height : ${window.screen.height}px;
+    position : fixed;
+    top : 0 ;
+    z-index : -1;
+`
+document.querySelector("body").append(documentBackgrond)
+window.addEventListener("resize" , () => {
+    documentBackgrond.style.cssText = `
+    width : ${window.screen.width}px;
+    height : ${window.screen.height}px;
+    position : fixed;
+    top : 0 ;
+    z-index : -1;
+    background-color: #373845;
+`
+})
