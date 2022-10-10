@@ -1502,6 +1502,7 @@ main .translations .wrapper .left_side_wrapper .items_wrapper {
   width: 100%;
   padding: 0px 0.5rem;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 main .translations .wrapper .left_side_wrapper .items_wrapper .item_of_search {
@@ -2258,7 +2259,7 @@ main .reports .reports_text_wrapper {
 }
 
 main .reports .reports_text_wrapper span {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-family: "Fira Sans";
   color: #fff;
   font-weight: 300;
@@ -3554,6 +3555,14 @@ main .disabled {
 }
 
 
+main .services .service_title span{
+  width: 37%;
+}
+
+main .main .my_home_section{
+  width: 100%;
+}
+
 body{
   overflow-x: hidden;
 }
@@ -3564,15 +3573,31 @@ section{
 main .reports .report_wrapper .filter_wrapper .chose_card_select{
   width: 30%;
 }
+main .main .last_payments_section .last_payments_text_wrapper .reports_wrapper_main .report .report-date{
+  font-size: 13px;
+  margin-left: 5px;
+  width: 115.2px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
 /*# sourceMappingURL=main.css.map */
 
 
 @media (max-width : 1900px) {
+  header .header_wrapper .left_side .balance .count{
+    font-size: 2rem;
+  }
   header .header_wrapper .left_side .header_buttons{
     width: 7%;
   }
 } 
 @media (max-width : 1800px) {
+  header .header_wrapper .left_side .balance .count{
+    font-size: 1.9rem;
+  }
   main nav{
     width: 7vw;
   }
@@ -3586,6 +3611,12 @@ main .reports .report_wrapper .filter_wrapper .chose_card_select{
   }
 } 
 @media (max-width : 1500px) {
+  header .header_wrapper .left_side .balance .count{
+    font-size: 1.8rem;
+  }
+  header .header_wrapper .left_side .logo_wrapper{
+    width: 8vw;
+  }
   header .header_wrapper .left_side .header_buttons{
     width: 10%;
   }
@@ -3609,9 +3640,38 @@ main .reports .report_wrapper .filter_wrapper .chose_card_select{
   .backdrop_el .wrapper{
     width: 37.5vw;
   }
+  main .translations .wrapper .left_side_wrapper .input_wrapper span{
+    font-size: 1.10rem;
+  }
 } 
 
 @media (max-width : 1280px) {
+  main .translations .wrapper .left_side_wrapper .input_wrapper .names_and_numbers_input{
+    font-size: 1rem;
+  }
+  header .header_wrapper .left_side .balance .count{
+    font-size: 1.75rem;
+  }
+  main .translations .wrapper .left_side_wrapper .items_wrapper .item_of_search .span_wrapper span:nth-child(3){
+    width: 150%;
+  }
+  main .properties .properties_items_wrapper .card_large_propeties{
+    width: 32%;
+    height: 150px;
+  }
+  main .cards .card_wrap .card_large{
+    width: 32%;
+    height: 150px;
+  }
+  main .cards .card_wrap .add_card_large{
+    width: 32%;
+  }
+  main .reports .report_wrapper .filter_wrapper .clear_reports_button span{
+    font-size: 0.750rem;
+  }
+  main .translations .wrapper .left_side_wrapper .input_wrapper span{
+    font-size: 1rem;
+  }
   main .reports .report_wrapper .filter_wrapper .chose_card_select{
     width: 40%;
   }
@@ -3622,7 +3682,7 @@ main .reports .report_wrapper .filter_wrapper .chose_card_select{
     width: 60%;
   }
   main .translations .wrapper .left_side_wrapper .items_wrapper .item_of_search .img_wrapper {
-    width: 37.9%;
+    width: 50%;
     height: 48.5%;
   }
   main .translations .wrapper .left_side_wrapper .items_wrapper .item_of_search .span_wrapper span:nth-child(3){
@@ -3641,6 +3701,24 @@ main .reports .report_wrapper .filter_wrapper .chose_card_select{
   main .main .card_section .wrapper .card_wrapper{
     width: 100%;
   }
+  main .cards .card_wrap .add_card_large{
+    width: 32%;
+    height: 150px;
+  }
+  main .properties .properties_items_wrapper .card_large_propeties .card_large_name{
+    transform: translateY(-5px);
+    font-size: 13px;
+  }
+  main .properties .properties_items_wrapper .card_large_propeties .card_large_balance{
+    transform: translateY(-12px);
+  }
+  main .cards .card_wrap .card_large .card_large_name{
+    transform: translateY(-7px);
+    font-size: 13px;
+  }
+  main .cards .card_wrap .card_large .card_large_balance{
+    transform: translateY(-12px);
+  }
 } 
 @media (max-width : 1200px) {
   section{
@@ -3651,11 +3729,6 @@ main .reports .report_wrapper .filter_wrapper .chose_card_select{
   }
 } 
 
-/* 
-@media (max-width : ) {
-
-} 
-*/
 @media (max-width : 1380px) {
   main .translations .wrapper .left_side_wrapper .items_wrapper .item_of_search .span_wrapper span:nth-child(3){
     font-size: 0.750rem;
@@ -3665,5 +3738,165 @@ main .reports .report_wrapper .filter_wrapper .chose_card_select{
   }
   main .translations .wrapper .left_side_wrapper .items_wrapper .item_of_search .span_wrapper span:nth-child(2){
     font-size: 1rem;
+  }
+} 
+
+@media (max-width : 1024px ) {
+  header .header_wrapper .left_side .balance .count{
+    font-size: 1.6rem;
+  }
+  header .header_wrapper .left_side .header_buttons{
+    width: 15%;
+  }
+  main .translations .wrapper .left_side_wrapper .items_wrapper .item_of_search .span_wrapper span:nth-child(3){
+    width: 190%;
+  }
+  main .translations .wrapper .left_side_wrapper .items_wrapper .item_of_search .span_wrapper span:nth-child(2){
+    font-size: 0.750rem;
+  }
+  main nav{
+    width: 9vw;
+  }
+  header .header_wrapper .left_side .logo_wrapper{
+    width: 9vw;
+  }
+  main .translations .text_wrapper{
+    font-size: 1.5rem;
+  }
+  main .services .service_title{
+    font-size: 1.5rem;
+  }
+  main .cards .title{
+    font-size: 1.5rem;
+  }
+  main .reports .reports_text_wrapper span{
+    font-size: 1.5rem;
+  }
+  main .properties .properties_text_wrapper span{
+    font-size: 1.5rem;
+  }
+  main .reports .report_wrapper .filter_wrapper .chose_card_select{
+    width: 50%;
+  }
+  main .reports .report_wrapper .reports_wrapper .report .report-content{
+    font-size: 13px;
+  }
+  main .reports .report_wrapper .reports_wrapper .report .report-date{
+    font-size: 13px;
+  }
+  main .translations .wrapper .left_side_wrapper .input_wrapper span{
+    font-size: 1rem;
+  }
+  main .translations .wrapper .right_side_wrapper .right_side_span_wrapper .card_number span{
+    font-size: 0.750rem;
+  }
+  main .translations .wrapper .right_side_wrapper{
+    width: 65%;
+  }
+  main .translations .wrapper .left_side_wrapper{
+    width: 33.5%;
+  }
+  main .translations .wrapper .right_side_wrapper .func_wrapper .card_select_wrapper .card_select_span{
+    font-size: 0.9rem;
+  }
+  main .translations .wrapper .right_side_wrapper .right_side_span_wrapper .clear_btn svg{
+    transform: scale(0.85);
+  }
+  main .main .my_home_section .button span{
+    font-size: 1rem;
+  }
+  main .reports .report_wrapper .filter_wrapper .clear_reports_button{
+    width: 15%;
+  }
+  .backdrop_el .wrapper{
+    width: 45vw;
+  }
+  main .mobile_operators .mobile_operators_wrapper .mobile_operator{
+    height: 111px;
+    width: 164px;
+  }
+  main .hostings .hostings_wrapper .hosting_item{
+    height: 111px;
+    width: 164px;
+  }
+  main .internet_packets .internet_packets_wrapper .internet_packet{
+    height: 111px;
+    width: 164px;
+  }
+  main .hostings .hostings_wrapper .hosting_item{
+    height: 111px;
+    width: 164px;
+  }
+} 
+/* 
+@media (max-width : ) {
+
+} 
+*/
+
+
+@media (max-width : 980px ) {
+  main .main .card_section .wrapper .card_wrapper .card{
+    width: 32%;
+  }
+  main .main .card_section .wrapper .card_wrapper .add_card{
+    width: 32%;
+  }
+  
+  main nav {
+    flex-direction: row;
+    bottom: 0%;
+    width: 100%;
+    height: 68px;
+    z-index: 50;
+    overflow: hidden;
+  }
+  section{
+    padding: 72px 2% 10% 2% !important;
+  }
+  main .main .card_section .wrapper .card_wrapper .card{
+    width: 31%;
+  }
+  main .main .card_section .wrapper .card_wrapper .add_card{
+    width: 31%;
+  }
+  .backdrop_el .wrapper{
+    height: 80vh;
+    width: 50vw;
+  }
+  main .cards .card_wrap .card_large{
+    width: 31.5%;
+  }
+  main .cards .card_wrap .add_card_large{
+    width: 31.5%;
+  }
+  main .translations .wrapper{
+    height: 75vh;
+  }
+  main .properties .properties_items_wrapper .card_large_propeties{
+    width: 31.5%;
+  }
+  .mobile_operators_menu .wrapper{
+    height: 60vh;
+  }
+  main .main .debts_section .debts_wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  main .translations .wrapper .right_side_wrapper .func_wrapper .card_select_wrapper .card_select_span{
+    font-size: 0.750rem;
+  }
+  main .translations .wrapper .right_side_wrapper .func_wrapper .inputs_btns_wrapper button{
+    font-size: 1rem;
+  }
+  main .translations .wrapper .right_side_wrapper .func_wrapper .inputs_btns_wrapper input{
+    font-size: 0.900rem;
+  }
+  main .translations .wrapper .right_side_wrapper .func_wrapper .card_select_wrapper .selected_card .card_number span{
+    font-size: 12px;
+  }
+  main .main .last_payments_section .last_payments_text_wrapper .reports_wrapper_main .report .report-date{
+    font-size: 13px;
   }
 } 
