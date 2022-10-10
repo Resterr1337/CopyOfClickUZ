@@ -4061,7 +4061,7 @@ main .main .my_home_section{
   display: none;
 }
 
-@media (max-width:320px) {
+@media (max-width:450px) {
   .add_card_menu .add_card_menu_wrapper{
     width: 95vw;
   }
