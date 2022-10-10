@@ -32,7 +32,7 @@ header {
   width: 100vw;
   -webkit-box-shadow: 0 5px 59px 0 rgba(0, 0, 0, 0.19);
           box-shadow: 0 5px 59px 0 rgba(0, 0, 0, 0.19);
-  padding: 5px 1.625rem 5px 0;
+  padding: 5px 1.625rem 5px 5px;
 }
 
 header .header_wrapper {
@@ -3844,6 +3844,9 @@ main .main .last_payments_section .last_payments_text_wrapper .reports_wrapper_m
     height: 111px;
     width: 164px;
   }
+  main .properties .properties_items_wrapper .card_large_propeties .card_large_balance{
+    width: 100%;
+  }
 } 
 
 
@@ -4021,5 +4024,220 @@ main .main .last_payments_section .last_payments_text_wrapper .reports_wrapper_m
   }
   main .properties .properties_items_wrapper .card_large_propeties{
     width: 47%;
+  }
+}
+
+@media (max-width : 560px) {
+  header .header_wrapper .left_side .balance .count{
+    font-size: 1.4rem;
+  }
+  header .header_wrapper .left_side .header_buttons{
+    width: 15%;
+  }
+  header .header_wrapper .left_side .logo_wrapper{
+    width: 20%;
+    height: 30%;
+  }
+  header .header_wrapper .left_side .logo_wrapper a svg{
+    width: 32px !important;
+    height: 40px !important;
+  }
+  header .header_wrapper .left_side .header_buttons .hide_balance_button{
+    width: 20px;
+  }
+  header .header_wrapper .left_side .header_buttons .reflesh_balance_button{
+    transform: translateY(5px) translateX(2px); 
+    width: 20px;
+  }
+  header .header_wrapper .left_side .balance .count{
+    width: 100%;
+  }
+  header .header_wrapper .left_side .balance{
+    width: 300px;
+  }
+}
+
+main .main .my_home_section{
+  display: none;
+}
+
+@media (max-width:320px) {
+  .add_card_menu .add_card_menu_wrapper{
+    width: 95vw;
+  }
+  .cheating_menu .wrapper .func_menu_wrapper .add_money_div .add_money_input_wrapper input{
+    width: 90%;
+  }
+  .cheating_menu .wrapper .func_menu_wrapper .add_money_div .add_money_input_wrapper input::placeholder{
+    font-size: 12px;
+  }
+  .backdrop_el .wrapper .func_menu_wrapper .change_color_div .change_color_wrap .color_input_wrapper input{
+    width: 50%;
+  }
+  .backdrop_el .wrapper .func_menu_wrapper .change_name_div .change_name_wrap .name_input_wrapper input{
+    width: 50%;
+  }
+  .backdrop_el .wrapper .func_menu_wrapper .item span{
+    font-size: 14px;
+  }
+  .backdrop_el .wrapper .func_menu_wrapper .change_name_div .change_name_wrap .title_of_item{
+    font-size: 14px;
+  }
+  .backdrop_el .wrapper .func_menu_wrapper .change_color_div .change_color_wrap .title_of_item{
+    font-size: 14px;
+  }
+  .backdrop_el .wrapper .func_menu_wrapper .reports_item span{
+    font-size: 14px;
+  }
+  .backdrop_el .wrapper .func_menu_wrapper .services_item span{
+    font-size: 14px;
+  }
+  .backdrop_el .wrapper .func_menu_wrapper .translation_item span{
+    font-size: 14px;
+  }
+  .backdrop_el .wrapper .close_card .wrap span{
+    font-size: 14px;
+  }
+  .backdrop_el .wrapper{
+    width: 95vw;
+  }
+  main .reports .report_wrapper .filter_wrapper .clear_reports_button{
+    width: 100%;
+  }
+  main .reports .report_wrapper .filter_wrapper .chose_card_select{
+    width: 100%;
+  }
+  main .reports .report_wrapper .filter_wrapper{
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+  }
+  main .reports .report_wrapper .reports_wrapper .report .report-date{
+    font-size: 8px;
+  }
+  main .reports .report_wrapper .reports_wrapper .report .report-content{
+    font-size: 8px;
+  }
+  main .properties .properties_items_wrapper .card_large_propeties{
+    width: 100%;
+  }
+  main .cards .card_wrap .add_card_large{
+    width: 100%;
+  }
+  main .cards .card_wrap .card_large{
+    width: 100%;
+  }
+  main .translations .wrapper .right_side_wrapper .right_side_span_wrapper{
+    height: 18%;
+  }
+  main .translations .wrapper .left_side_wrapper .items_wrapper .item_of_search .img_wrapper {
+    height: 50%;
+  }
+  main .translations .wrapper .right_side_wrapper .active{
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+  }
+  main .translations .wrapper .right_side_wrapper .func_wrapper .card_select_wrapper .card_select_span{
+    font-size: 0.75rem;
+  }
+  main .translations .wrapper .right_side_wrapper .func_wrapper .card_select_wrapper{
+    width: 100%;
+  }
+
+  main .translations .wrapper .right_side_wrapper .func_wrapper .inputs_btns_wrapper{
+    width: 100%;
+  }
+  main .translations .wrapper .right_side_wrapper .right_side_span_wrapper .clear_btn{
+    transform: scale(0.75);
+  }
+  main .translations .wrapper .right_side_wrapper .right_side_span_wrapper .card_number {
+    transform: translateX(-10px);
+  }
+  main .translations .wrapper .right_side_wrapper .right_side_span_wrapper .card_number span{
+    font-size: 0.75rem;
+  }
+  main .translations .wrapper .left_side_wrapper .input_wrapper span{
+    font-size: 0.75rem;
+  }
+  main .favourites .span{
+    width: 100%;
+    font-size: 1rem;
+  }
+  main .hostings .hostings_wrapper .hosting_item{
+    width: 45.5%;
+    height: 85px;
+  }
+  main .credit_close .credit_close_wrapper .credit_close_bank{
+    width: 45.5%;
+    height: 85px;
+  }
+  main .mobile_operators .mobile_operators_wrapper .mobile_operator{
+    width: 45.5%;
+    height: 85px;
+  }
+
+  main .services .service_title span{
+    font-size: 1rem;
+    width: 52.5%;
+  }
+  main .services .service_title{
+    font-size: 1rem;
+  }
+  main .services .servives_items_wrapper .service{
+    width: 100%;
+  }
+  main .main .my_home_section .wrapper .img_wrapper{
+    display: none;
+  }
+  main .main .debts_section .debts_text_wrapper span{
+    font-size: 1rem;
+  }
+  main .main .debts_section .debts_wrapper .item span{
+    font-size: 0.750rem;
+  }
+  main .main .debts_section .debts_wrapper .item{
+    width:80%;
+  }
+  main .main .card_section .wrapper .card_wrapper .add_card{
+    width: 100%;
+  }
+  main .main .card_section .wrapper .card_wrapper .card{
+    width: 100%;
+  }
+  main nav .nav_elem .elem_title{
+    display: none;
+  }
+  header .header_wrapper .left_side .header_buttons {
+    width: 20%;
+  }
+  header{
+    height: 50px;
+  }
+  header .header_wrapper .left_side .balance .count .vallet{
+    font-size: 0.75rem;
+  }
+  header .header_wrapper .left_side .balance .count{
+    font-size: 1rem;
+    font-weight: 100;
+  }
+  header .header_wrapper .left_side{
+    width: 100%;
+  }
+  header .header_wrapper .right_side{
+    width: 35%;
+    display: none;
+  }
+  header .header_wrapper .left_side .logo_wrapper{
+    display: none;
+  }
+  header .header_wrapper .right_side .contacts a{
+    font-size: 10px;
+  }
+  header .header_wrapper .right_side .contacts .number{
+    font-size: 12px;
+  }
+  header .header_wrapper .right_side .contacts .code{
+    font-size: 12px;
   }
 }
