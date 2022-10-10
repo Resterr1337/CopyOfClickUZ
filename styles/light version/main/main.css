@@ -2099,7 +2099,7 @@ main .properties {
 
 main .properties .properties_text_wrapper {
   margin-bottom: 50px;
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 main .properties .properties_text_wrapper span {
@@ -2255,6 +2255,7 @@ main .reports {
 }
 
 main .reports .reports_text_wrapper {
+  margin-top: 15px;
   margin-bottom: 50px;
 }
 
@@ -3461,7 +3462,7 @@ main .disabled {
 }
 
 .cheating_menu .wrapper .func_menu_wrapper .add_money_div {
-  width: 80%;
+  width: 95%;
   -webkit-transition-duration: 0.250s;
           transition-duration: 0.250s;
   display: -webkit-box;
@@ -3646,6 +3647,15 @@ main .main .last_payments_section .last_payments_text_wrapper .reports_wrapper_m
 } 
 
 @media (max-width : 1280px) {
+  .add_card_menu .add_card_menu_wrapper{
+    width: 40vw;
+  }
+  main .translations .wrapper .right_side_wrapper .func_wrapper .card_select_wrapper .selected_card .card_balance {
+    width:  85% !important;
+  }
+  main .translations .wrapper .right_side_wrapper .func_wrapper .card_select_wrapper .selected_card .card_number {
+    width: 150%;
+  }
   main .translations .wrapper .left_side_wrapper .input_wrapper .names_and_numbers_input{
     font-size: 1rem;
   }
@@ -3742,6 +3752,9 @@ main .main .last_payments_section .last_payments_text_wrapper .reports_wrapper_m
 } 
 
 @media (max-width : 1024px ) {
+  .add_card_menu .add_card_menu_wrapper{
+    width: 45vw;
+  }
   header .header_wrapper .left_side .balance .count{
     font-size: 1.6rem;
   }
@@ -3782,6 +3795,10 @@ main .main .last_payments_section .last_payments_text_wrapper .reports_wrapper_m
     font-size: 13px;
   }
   main .reports .report_wrapper .reports_wrapper .report .report-date{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
     font-size: 13px;
   }
   main .translations .wrapper .left_side_wrapper .input_wrapper span{
@@ -3828,14 +3845,13 @@ main .main .last_payments_section .last_payments_text_wrapper .reports_wrapper_m
     width: 164px;
   }
 } 
-/* 
-@media (max-width : ) {
-
-} 
-*/
 
 
 @media (max-width : 980px ) {
+  .add_card_menu .add_card_menu_wrapper{
+    width: 50vw;
+  }
+
   main .main .card_section .wrapper .card_wrapper .card{
     width: 32%;
   }
@@ -3864,6 +3880,7 @@ main .main .last_payments_section .last_payments_text_wrapper .reports_wrapper_m
     height: 80vh;
     width: 50vw;
   }
+
   main .cards .card_wrap .card_large{
     width: 31.5%;
   }
@@ -3900,3 +3917,109 @@ main .main .last_payments_section .last_payments_text_wrapper .reports_wrapper_m
     font-size: 13px;
   }
 } 
+
+/* 
+@media (max-width : ) {
+
+} 
+*/
+@media (max-width : 768px) {
+  .add_card_menu .add_card_menu_wrapper{
+    width: 60vw;
+  }
+  main .translations .wrapper .left_side_wrapper .input_wrapper span{
+    font-size: 0.95rem;
+  }
+  main .translations .wrapper{
+    flex-direction: column;
+  }
+  main .translations .wrapper .left_side_wrapper{
+    width: 95%;
+    margin-bottom: 10px;
+  }
+  main .translations .wrapper .right_side_wrapper{
+    margin-top: 10px;
+    width: 95%;
+  }
+  main .translations .wrapper .left_side_wrapper .input_wrapper{
+    height: 30%;
+  }
+  main .translations .wrapper .right_side_wrapper .right_side_span_wrapper{
+    height: 30%;
+  }
+  main .translations .wrapper .right_side_wrapper .active{
+    height: 30%;
+  }
+  main .translations .wrapper .right_side_wrapper .func_wrapper .inputs_btns_wrapper{
+    height: 100%;
+  }
+  main .translations .wrapper .right_side_wrapper .func_wrapper .card_select_wrapper .card_select_span{
+    font-size: 1rem;
+  }
+  main .translations .wrapper .right_side_wrapper .func_wrapper .card_select_wrapper .selected_card{
+    height: 79px;
+  }
+  main .translations .wrapper .left_side_wrapper .items_wrapper .item_of_search .img_wrapper{
+    height: 90%;
+  }
+  main .translations .wrapper .left_side_wrapper .items_wrapper .item_of_search .span_wrapper span:nth-child(1){
+    font-size: 1rem;
+  }
+  main .translations .wrapper .left_side_wrapper .items_wrapper .item_of_search .span_wrapper span:nth-child(2){
+    font-size: 1rem;
+  }
+  main .translations .wrapper .left_side_wrapper .items_wrapper .item_of_search .span_wrapper span:nth-child(3){
+    font-size: 1rem;
+  }
+  main .main .debts_section{
+    margin-top: 100px;
+  }
+  main .translations .wrapper .left_side_wrapper .items_wrapper .item_of_search{
+    border-radius: 15px;
+  }
+  main .reports .report_wrapper .filter_wrapper .chose_card_select{
+    width: 70%;
+  }
+  .backdrop_el .wrapper{
+    width: 70vw;
+  }
+} 
+
+@media (max-width : 650px) {
+  main .main .my_home_section .wrapper .text_wrapper .subtitle{
+    font-size: 0.650rem;
+  }
+  .add_card_menu .add_card_menu_wrapper{
+    width: 65vw;
+  }
+  main .reports .report_wrapper .reports_wrapper .report .report-date{
+    font-size: 10px;
+  }
+  main .reports .report_wrapper .reports_wrapper .report .report-content{
+    font-size: 11px;
+  }
+  main .main .last_payments_section .last_payments_text_wrapper .reports_wrapper_main .report .report-content{
+    font-size: 11px;
+  }
+  main .main .last_payments_section .last_payments_text_wrapper .reports_wrapper_main .report .report-date{
+    font-size: 10px;
+  }
+  header .header_wrapper .left_side .header_buttons{
+    width: 20%;
+  }
+  main .cards .card_wrap .card_large{
+    width: 47%;
+  }
+  main .main .card_section .wrapper .card_wrapper .card{
+    width: 47%;
+  }
+  main .main .card_section .wrapper .card_wrapper .add_card{
+    width: 47%;
+  }
+  main .cards .card_wrap .add_card_large{
+    width: 47%;
+  }
+  main .properties .properties_items_wrapper .card_large_propeties{
+    width: 47%;
+  }
+}
